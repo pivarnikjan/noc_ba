@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# v1.0  jp002f  07/26/2017  Started versioning header.sh
-# v2.0  jp002f  09/26/2017  Added latest version of deploy.sh
+# set -ex
 
 CONTAINER_NAME="demo_nightofchances"
 CONTAINER_TAG="1.0"

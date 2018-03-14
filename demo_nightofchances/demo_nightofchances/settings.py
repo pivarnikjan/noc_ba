@@ -28,21 +28,17 @@ settings.read(CONF_FILE)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = settings.get('DJANGO_APP', 'secret_key')
 
-DB = 'MARIA_DB'
-
-DB_NAME = settings.get(DB, 'db')
-HOSTNAME = settings.get(DB, 'hostname')
-PORT = settings.get(DB, 'port')
-USER = settings.get(DB, 'user')
-PASSWORD = settings.get(DB, 'password')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['defragcs01.intl.att.com',
-                 'gbcdcgcs01.intl.att.com',
-                 '135.76.144.190',
-                 gethostname(), gethostbyname(gethostname()),]
+ALLOWED_HOSTS = [
+    'defragcs01.intl.att.com',
+    'gbcdcgcs01.intl.att.com',
+    '135.76.144.190',
+    gethostname(), 
+    gethostbyname(gethostname()),
+]
 
 
 # Application definition
@@ -54,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    
+    # 3rd party libs
     'corsheaders',
     'rest_framework',
     'rest_service',
